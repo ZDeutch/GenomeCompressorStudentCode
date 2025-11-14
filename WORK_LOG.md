@@ -1,9 +1,9 @@
 Name: YOUR NAME HERE
 
-| Date    |  Time  |                                     Update |
-|:--------|:------:|-------------------------------------------:|
-| April 5 | 9-10pm | I tried to write abstract, efficient code. |
-|         |        |                                            |
+| Date        |      Time      |                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Update |
+|:------------|:--------------:|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| April 5     |     9-10pm     |                                                                                                                                                                                                                                                                                                                                                                                                                                        I tried to write abstract, efficient code. |
+| November 14 | 2:30 - 3:00 pm | I spent this work period primarily attempting to understand the problem set. I know that I need to map the four letters, A,C,G,T to  binary numbers 00,01,10,11. I need to use the BinaryStdIn and BinaryStdOut to read and write the data from the file. I feel as though in theory it should be faster make the file exactly 30% of its original size rather than any less. I still have to figure out exactly how to take the data from the file and compress it using a map.  |
 
 
 To add a new row to the table, click into a cell and then hit shift-enter.
