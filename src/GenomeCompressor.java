@@ -23,12 +23,20 @@ public class GenomeCompressor {
      * Reads a sequence of 8-bit extended ASCII characters over the alphabet
      * { A, C, T, G } from standard input; compresses and writes the results to standard output.
      */
+    // Method to compress given genome sequence
     public static void compress() {
+        // Read in the genome sequence
         String input = BinaryStdIn.readString();
+        // Make the header input
         int length = input.length();
 
+        // Read out the line of sequence;
         BinaryStdOut.write(length);
 
+        // For every letter in the sequence
+        // Convert it to an ASCII Value
+        // Find it's 8 bit equivalent and return as 2 bits
+        // Then write those 2 bits
         for (int i = 0; i < length; i++) {
             char c = input.charAt(i);
             int bits = encode(c);
@@ -41,9 +49,14 @@ public class GenomeCompressor {
     /**
      * Reads a binary sequence from standard input; expands and writes the results to standard output.
      */
+    // Method to expand genome sequence
     public static void expand() {
+        // Read in the genome sequence
         int length = BinaryStdIn.readInt();
 
+        // For every letter in the word
+        // Convert the 2 bit into 8 bit using helper method
+        // Write in those 8 bits
         for(int i = 0; i < length; i++) {
             int bits = BinaryStdIn.readInt(2);
             char c = decode(bits);
@@ -53,6 +66,8 @@ public class GenomeCompressor {
         BinaryStdOut.close();
     }
 
+    // For each letter see if its ASCII values are equal
+    // Then return the 2 bit form
     public static int encode(char c) {
         if (c == 'A') {
             return 0b00;
@@ -64,6 +79,9 @@ public class GenomeCompressor {
             return 0b11;
         }
     }
+
+    // For each letter see if the 2 bit form is equal
+    // Then return the 8 bit form
     public static char decode(int code) {
         if (code == 0b00) {
             return 'A';
